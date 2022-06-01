@@ -5,9 +5,9 @@ UTSA Data Visualization Project 4
 
 
 
-# Covid-19 Data Flask App
+# Poker Data Flask App
 
-![gif](https://media0.giphy.com/media/TjGV8ni2jC5pj6iY6T/giphy.gif?cid=ecf05e47y9n1wxob6r5xqw6jwu2oos5x0f569mhs87qbj2ne&rid=giphy.gif&ct=g)
+![gif](https://media.giphy.com/media/xT9DPlAUKTl1GeZjC8/giphy.gif)
 
 ## Table of contents
 
