@@ -12,7 +12,7 @@ UTSA Data Visualization Project 4
 ## Table of contents
 
 * [Coivd-19 Data](#covid-19-data)
-* [Data Sources](#data-sources)
+* [Data Source](#data-sources)
 * [Technologies](#technologies)
 * [Extract](#extract)
 * [Transform](#transform)
@@ -21,14 +21,14 @@ UTSA Data Visualization Project 4
 * [Run Flask App](#run-flask)
 * [Contacts](#contacts)
 
-## Covid-19 Data
+## Poker Data
 
 Objective: The objective was to present a more easily searchable Covid-19 data recorded throughout the heights of the pandemic by continent or by country and the date range.
 
 ## Data Source
 
 - [Poker Data](http://poker.cs.ualberta.ca/irc_poker_database.html)
-- [United States](https://data.cdc.gov/Case-Surveillance/United-States-COVID-19-Cases-and-Deaths-by-State-o/9mfq-cb36)
+
 
 ## Technologies
 * Python
@@ -41,7 +41,7 @@ Objective: The objective was to present a more easily searchable Covid-19 data r
 
 # Extract
 
-* Find data sources via poker data, united states (csvs)
+* Find find poker data sources
 * Jupyter Notebook to setup a logic, view, clean, and organize data with Pandas/Python
 
 # Transform
