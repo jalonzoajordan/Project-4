@@ -11,7 +11,7 @@ UTSA Data Visualization Project 4
 
 ## Table of contents
 
-* [Coivd-19 Data](#covid-19-data)
+* [Poker Data](#poker-data)
 * [Data Source](#data-sources)
 * [Technologies](#technologies)
 * [Extract](#extract)
