@@ -23,7 +23,7 @@ UTSA Data Visualization Project 4
 
 ## Poker Data
 
-Objective: The objective was to present a more easily searchable Covid-19 data recorded throughout the heights of the pandemic by continent or by country and the date range.
+Objective: The objective was to create a poker web app to tell wether a specific hand had the chance of winning or losing the game.
 
 ## Data Source
 
