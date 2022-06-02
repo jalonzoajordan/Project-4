@@ -1,0 +1,63 @@
+html,body{
+    margin:0;
+    padding:0:
+}
+body{
+    font-family: 'Montserrat';
+    height: 100vh;
+    background: rgb(10, 10, 10);
+}
+
+.wrapper{
+    padding:1em;
+}
+
+ul{
+    list-style:none;
+    display: flex;
+    padding: 0;
+    margin-right: auto;
+
+}
+a{
+    text-decoration: none;
+    color: rgb(245, 237, 237);
+}
+
+li a{
+    margin-right: 2em;
+}
+
+h1{
+    font-size:3em;
+    margin-top: 1.5em;
+}
+
+.cta{
+    display: block;
+    padding: 2em 2em 2em 0;
+    font-size: 1.4em;
+}
+
+img{
+    width:100%;
+    clip-path: polygon(0 0, 100% 0, 0 0);
+}
+
+ul.transition {
+    display: flex; 
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+}
+
+ul transition li{
+    transform: scaleY(0);
+    background:rgb(10, 10, 10);
+    width: 20%;
+}
