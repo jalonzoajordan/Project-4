@@ -41,7 +41,7 @@ Objective: The objective was to create a poker web app to tell wether a specific
 
 # Extract
 
-* Find find poker data sources
+* Find poker data sources
 * Jupyter Notebook to setup a logic, view, clean, and organize data with Pandas/Python
 
 # Transform
@@ -52,7 +52,6 @@ Objective: The objective was to create a poker web app to tell wether a specific
 # Load
 
 * Build Line Charts
-* Build Leaflet maps, using javascript to use JSON API call
 * Build Flask app and connectivity
  
 # Deploy
