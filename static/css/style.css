@@ -223,16 +223,16 @@ hr {
 	border: none;
 }
 /*=======================================================
-      TITTLE
+      TITLE
 ========================================================*/
-.tittle {
+.title {
 	text-align: center;
 	margin-bottom: 30px;
 	width: 75%;
 	margin: 0 auto;
 	margin-bottom: 70px;
 }
-.tittle h4 {
+.title h4 {
 	font-weight: normal;
 	margin: 0px;
 	font-size: 26px;
@@ -241,7 +241,7 @@ hr {
 	margin-bottom: 20px;
 	letter-spacing: 1px;
 }
-.tittle p {
+.title p {
 	color: #989898;
 	font-size: 15px;
 	font-family: 'Droid Serif', serif;
@@ -261,13 +261,13 @@ hr {
 /*=======================================================
       Padding 150px
 ========================================================*/
-.sectoion-150px {
+.section-150px {
 	padding: 20px 0;
 }
 /*=======================================================
       Padding 100px
 ========================================================*/
-.sectoion-100px {
+.section-100px {
 	padding: 20px 0;
 }
 /*=======================================================
@@ -322,6 +322,9 @@ header .menu ul.dropdown {
 	padding-bottom: 0px;
 	background: #fff;
 }
+/*=======================================================
+     Menu Text 
+========================================================*/
 header .menu ul.dropdown li a {
 	text-transform: uppercase;
 	font-size: 20px;
