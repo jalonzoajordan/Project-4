@@ -312,15 +312,15 @@ header nav li.active a {
 }
 header nav li a:hover {
 }
-header nav .ownmenu li {
+header nav .menu li {
 	float: left;
 	padding: 0 15px;
 }
-header .ownmenu ul.dropdown {
+header .menu ul.dropdown {
 	padding-bottom: 0px;
 	background: #fff;
 }
-header .ownmenu ul.dropdown li a {
+header .menu ul.dropdown li a {
 	text-transform: uppercase;
 	font-size: 12px;
 	border: none;
@@ -333,15 +333,15 @@ header .ownmenu ul.dropdown li a {
 	width: 100%;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-header .ownmenu ul.dropdown li a:hover {
+header .menu ul.dropdown li a:hover {
 	background: #343434;
 	color: #fff;
 }
-header .ownmenu li > .megamenu li a:hover {
+header .menu li > .megamenu li a:hover {
 	background: #343434;
 	color: #fff;
 }
-header nav .ownmenu .indicator {
+header nav .menu .indicator {
 	display: none;
 }
 header ul.dropdown {
@@ -352,7 +352,7 @@ header ul.dropdown li {
 header ul.dropdown li:hover {
 	background: none
 }
-header.main-header nav .ownmenu li {
+header.main-header nav .menu li {
 	padding: 0px;
 }
 /*=======================================================
