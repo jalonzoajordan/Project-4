@@ -21,7 +21,7 @@ navlist-right li {
 	padding: 0px;
 }
 body {
-	background: #FFF;
+	background: rgb(0, 0, 0);
 	font-weight: normal;
 	position: relative;
 	font-size: 13px;
@@ -281,7 +281,7 @@ header {
 header .logo {
 	float: left;
 	width: auto;
-	margin: 30px 0;
+	margin: px 0;
 	position: relative;
 	z-index: 99;
 }
@@ -290,16 +290,18 @@ header nav {
 	position: relative;
 	z-index: 999;
 	float: right;
-	margin-top: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
 }
 header nav li a {
-	padding: 10px 0px;
+	padding: 5px 0px;
 	margin: 0;
 	border-color: transparent;
 	text-decoration: none;
-	line-height: 20px;
+	line-height: 10px;
 	text-transform: uppercase;
-	color: #101010;
+	color: #ffffff;
 	float: left;
 	font-size: 12px;
 	margin: 0 15px;
@@ -314,7 +316,7 @@ header nav li a:hover {
 }
 header nav .menu li {
 	float: left;
-	padding: 0 15px;
+	padding: 0 5px;
 }
 header .menu ul.dropdown {
 	padding-bottom: 0px;
@@ -322,12 +324,12 @@ header .menu ul.dropdown {
 }
 header .menu ul.dropdown li a {
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 20px;
 	border: none;
-	padding: 0px 20px;
-	line-height: 38px;
+	padding: 0px 5px;
+	line-height: 50px;
 	background: none;
-	color: #000;
+	color: rgb(255, 255, 255);
 	font-size: 12px;
 	display: inline-block;
 	width: 100%;
@@ -372,7 +374,7 @@ header.main-header nav .menu li {
 .position-center-center {
 	left: 50%;
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
