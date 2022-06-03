@@ -41,13 +41,12 @@ Objective: The objective was to create a poker web app to tell wether a specific
 
 # Extract
 
-* Find poker data sources
+* Took txt files from lib/raw_data-cleanup folder and turned them into csv files
 * Jupyter Notebook to setup a logic, view, clean, and organize data with Pandas/Python
 
 # Transform
 
 * Transfer from CSV to SQLite
-* We combined both US and World 
 
 # Load
 
