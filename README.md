@@ -23,7 +23,7 @@ UTSA Data Visualization Project 4
 
 ## Poker Data
 
-Objective: The objective was to create a poker web app to tell wether a specific hand had the chance of winning or losing the game.
+Objective: The objective was to create a poker web app to tell wether you should bet or bluff a cerain table.
 
 ## Data Source
 
@@ -35,7 +35,7 @@ Objective: The objective was to create a poker web app to tell wether a specific
 * Flask
 * Javascript
 * HTML/CSS
-* Plotly
+* Tableau
 * Jupyter Notebook
 * SQLiteStudio
 
