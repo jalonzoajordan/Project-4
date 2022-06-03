@@ -262,13 +262,13 @@ hr {
       Padding 150px
 ========================================================*/
 .section-150px {
-	padding: 20px 0;
+	padding: 10px 0;
 }
 /*=======================================================
       Padding 100px
 ========================================================*/
 .section-100px {
-	padding: 20px 0;
+	padding: 10px 0;
 }
 /*=======================================================
       HEADER
@@ -290,21 +290,21 @@ header nav {
 	position: relative;
 	z-index: 999;
 	float: right;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 25px;
+	margin-bottom: 0px;
 
 }
 header nav li a {
-	padding: 5px 0px;
+	padding: 15px 15px;
 	margin: 0;
 	border-color: transparent;
 	text-decoration: none;
-	line-height: 10px;
+	line-height: 50px;
 	text-transform: uppercase;
 	color: #ffffff;
 	float: left;
 	font-size: 12px;
-	margin: 0 15px;
+	margin:  5px;
 	font-family: 'montserratregular';
 	position: relative;
 }
@@ -333,10 +333,10 @@ header .menu ul.dropdown li a {
 	line-height: 80px;
 	background: none;
 	color: rgb(255, 255, 255);
-	font-size: 12px;
+	font-size: 16px;
 	display: inline-block;
 	width: 100%;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-bottom: 0px solid rgba(0,0,0,0.05);
 }
 header .menu ul.dropdown li a:hover {
 	background: #343434;
@@ -377,7 +377,7 @@ header.main-header nav .menu li {
 .position-center-center {
 	left: 50%;
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
@@ -401,7 +401,7 @@ header.main-header nav .menu li {
 	margin-left: 20px;
 }
 .margin-t-20 {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 .margin-t-30 {
 	margin-top: 30px;
@@ -419,7 +419,7 @@ header.main-header nav .menu li {
 	margin-left: 40px;
 }
 .margin-t-40 {
-	margin-top: 40px;
+	margin-top: 10px;
 }
 .margin-b-40 {
 	margin-bottom: 40px;
@@ -452,7 +452,7 @@ header.main-header nav .menu li {
 	padding-left: 20px;
 }
 .padding-t-20 {
-	padding-top: 20px;
+	padding-top: 10px;
 }
 .padding-t-50 {
 	padding-top: 50px;
