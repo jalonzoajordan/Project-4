@@ -7,9 +7,15 @@
       THEME STYLING START
 ========================================================*/
 
-navlist {
-	float: right;
-  }
+navlist-right li {
+    display: inline-block;
+}
+/* .navbar-nav > li{
+	padding-left:10px;
+	padding-right:10px;
+	position: right;
+  } */
+	
 * {
 	margin: 0px;
 	padding: 0px;
@@ -256,7 +262,7 @@ hr {
       Padding 150px
 ========================================================*/
 .sectoion-150px {
-	padding: 150px 0;
+	padding: 50px 0;
 }
 /*=======================================================
       Padding 100px
