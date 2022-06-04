@@ -1,110 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project4</title>
 
 
-<!-- FONTS ONLINE -->
-<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- FONTS ONLINE -->
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-<!--MAIN STYLE-->
-<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="css/main.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="css/responsive.css" rel="stylesheet" type="text/css">
-<link href="css/animate.css" rel="stylesheet" type="text/css">
+    <!--MAIN STYLE-->
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
 
-<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-<link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
 
 
 </head>
+
 <body>
 
-<!-- Page Wrap -->
-<div id="wrap">
-  <div id="main-wrapper">
-    <header class="main-header">
-      <div class="container-fluid">
-
-      
-
-
-<!-- Nav Menu -->
-
-<nav>
-  <ul id="menu" class="menu">
-    <li class="active">
-      <ul class="dropdown">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="play.html">Play</a></li>
-        <li><a href="data.html">Data</a></li>
-
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <!-- Page Wrap -->
+    <div id="wrap">
+        <div id="main-wrapper">
+            <header class="main-header">
+                <div class="container-fluid">
 
 
 
 
-      </div>
-    </header>
-  </div>
-</div>
+                    <!-- Nav Menu -->
 
-<h1 style="color:white;">Our Data Journey</h1>
-<h3 style="color:whitesmoke;">Data Cleanup</h3>
-<h6 style="color: white;">We started with data from the University of Alberta Computer Poker Research group that included three raw CSV files that included information on player's poker hands, winnings, actions during the 
-    various rounds of Texas Hold 'Em, chair position, table information as well as betting information. The tables were stored in a sqlite database and imported using SQLalchemy. After reviewing the data, we used Pandas and Python to reduce the number of attributes to 12
-    (num_players, flop_pot, turn_pot, river_pot, chip_count, chair_num, player_bet, table_1, table_2, table_3, table_4, table_5, flop_players, turn_players, river_players) and used the "player_winnings" 
-    column as our target value. Columns containing numerical values were converted to numberical types. For the non-numerical values, the "get_dummies" feature was used to allow for the selection of cards on the table. Those columns were table1 - table5
-    and represented the 5 cards that could be played throughout the round. This increased the number of columns from 12 to 270. The "y"/"player_winnings" column was formatted to 0's for rows with no winning values and 1's for rows with winnings in order to create our targets. 
-    From there, we were able to move on creating the machine learning model.
-</h6>
-<br>
-<img src="../visualizations/rawdata.png" class="img-fluid" alt="rawdata">
-<br>
-<br>
-<h6 style="color:white;">Once the data had been cleaned, we moved on to the machine learning portion of the project which consisted of our instructor Nathan's three favorite steps: model, fit, predict. We used the Sci-Kit learning library
-</h6>
-<br>
-<img src="../visualizations/model.png" class="img-fluid" alt="model">
-<br><br>
-<img src="../visualizations/deeplearning.png" class="img-fluid" alt="deeplearning">
-<br><br>
-<img src="../visualizations/winnings_vs_chair.png" class="img-fluid" alt="winnings_vs_chair">
-<br>
-<br>
-<br>
-<img src="../visualizations/winnings_vs_player.png" class="img-fluid" alt="winnings_vs_player" style="width:80%;height:65%;">
+                    <nav>
+                        <ul id="menu" class="menu">
+                            <li class="active">
+                                <ul class="dropdown">
+                                    <li><a href="index.html">HOME</a></li>
+                                    <li><a href="play.html">Play</a></li>
+                                    <li><a href="data.html">Data</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
 
 
 
-    
-    
+
+                </div>
+            </header>
         </div>
-      </div>
+    </div>
+
+    <h1 style="color:white;">Our Data Journey</h1>
+    <h3 style="color:whitesmoke;">Data Cleanup</h3>
+    <h6 style="color: white;">We started with data from the University of Alberta Computer Poker Research group that
+        included three raw CSV files that included information on player's poker hands, winnings, actions during the
+        various rounds of Texas Hold 'Em, chair position, table information as well as betting information. The tables
+        were stored in a sqlite database and imported using SQLalchemy. After reviewing the data, we used Pandas and
+        Python to reduce the number of attributes to 12
+        (num_players, flop_pot, turn_pot, river_pot, chip_count, chair_num, player_bet, table_1, table_2, table_3,
+        table_4, table_5, flop_players, turn_players, river_players) and used the "player_winnings"
+        column as our target value. Columns containing numerical values were converted to numberical types. For the
+        non-numerical values, the "get_dummies" feature was used to allow for the selection of cards on the table. Those
+        columns were table1 - table5
+        and represented the 5 cards that could be played throughout the round. This increased the number of columns from
+        12 to 270. The "y"/"player_winnings" column was formatted to 0's for rows with no winning values and 1's for
+        rows with winnings in order to create our targets.
+        From there, we were able to move on creating the machine learning model.
+    </h6>
+    <br>
+    <img src="../visualizations/rawdata.png" class="img-fluid" alt="rawdata">
+    <br>
+    <br>
+    <h6 style="color:white;">Once the data had been cleaned, we moved on to the machine learning portion of the project
+        which consisted of our instructor Nathan's three favorite steps: model, fit, predict. We used the Sci-Kit
+        learning library to train/test/split the X dataframe, scale and fit
+        the data using StandardScaler and scaler.transform, and finally define the deep learning model. ****insert
+        information about the model here ****. Once the model ran through, we were able to determine it had 88%
+        accuracy.
+    </h6>
+    <br>
+    <img src="../visualizations/model.png" class="img-fluid" alt="model">
+    <br><br>
+    <img src="../visualizations/deeplearning.png" class="img-fluid" alt="deeplearning">
+
+    <br><br>
+    <h3 style="color:whitesmoke;">Visualizations</h3>
+    <br>
+    <h6 style="color: white;"></h6>
+    <div class='tableauPlaceholder' id='viz1654357376135' style='position: relative'><noscript><a href='#'><img
+                    alt='cntwinningsbychair '
+                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-4_16543570155830&#47;cntwinningsbychair&#47;1_rss.png'
+                    style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='project-4_16543570155830&#47;cntwinningsbychair' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-4_16543570155830&#47;cntwinningsbychair&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+        </object></div>
+    <script
+        type='text/javascript'>                    var divElement = document.getElementById('viz1654357376135'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <br>
+    <br>
+    <div class='tableauPlaceholder' id='viz1654357693484' style='position: relative'><noscript><a href='#'><img
+                    alt='winningsbychair '
+                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-4_16543570155830&#47;winningsbychair&#47;1_rss.png'
+                    style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='project-4_16543570155830&#47;winningsbychair' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-4_16543570155830&#47;winningsbychair&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+        </object></div>
+    <script
+        type='text/javascript'>                    var divElement = document.getElementById('viz1654357693484'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.height = '487px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.height = '487px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <br>
+    <div class='tableauPlaceholder' id='viz1654357122258' style='position: relative'><noscript><a href='#'><img
+                    alt='avgwinningsbynumofplayers '
+                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-4_16543570155830&#47;avgwinningsbynumofplayers&#47;1_rss.png'
+                    style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='project-4_16543570155830&#47;avgwinningsbynumofplayers' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-4_16543570155830&#47;avgwinningsbynumofplayers&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+        </object></div>
+    <script
+        type='text/javascript'>                    var divElement = document.getElementById('viz1654357122258'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+
+
+
+
+    </div>
+    </div>
     </section>
-  </div>
-</div>
-<!-- Wrap End --> 
+    </div>
+    </div>
+    <!-- Wrap End -->
 
-<script src="js/jquery-1.11.3.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/own-menu.js"></script> 
-<script src="js/owl.carousel.min.js"></script> 
-<script src="js/jquery.isotope.min.js"></script> 
-<script src="js/counter.js"></script> 
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/own-menu.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/counter.js"></script>
 
-<!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
-<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
-<script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
-<script src="js/main.js"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
