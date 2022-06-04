@@ -231,6 +231,7 @@ hr {
 	width: 75%;
 	margin: 0 auto;
 	margin-bottom: 70px;
+	
 }
 .title h4 {
 	font-weight: normal;
@@ -240,6 +241,7 @@ hr {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	letter-spacing: 1px;
+	color: #ffffff;
 }
 .title p {
 	color: #989898;
@@ -278,13 +280,9 @@ header {
 	position: relative;
 	font-family: 'Montserrat', sans-serif;
 }
-header .logo {
-	float: left;
-	width: auto;
-	margin: px 0;
-	position: relative;
-	z-index: 99;
-}
+/*=======================================================
+     Navigation Text 
+========================================================*/
 header nav {
 	display: inline-block;
 	position: relative;
@@ -295,16 +293,16 @@ header nav {
 
 }
 header nav li a {
-	padding: 15px 15px;
+	padding: 10px 0px;
 	margin: 0;
 	border-color: transparent;
 	text-decoration: none;
-	line-height: 50px;
+	line-height: 20px;
 	text-transform: uppercase;
 	color: #ffffff;
 	float: left;
 	font-size: 12px;
-	margin:  5px;
+	margin:  0 15px;
 	font-family: 'montserratregular';
 	position: relative;
 }
@@ -329,14 +327,14 @@ header .menu ul.dropdown li a {
 	text-transform: uppercase;
 	font-size: 20px;
 	border: none;
-	padding: 0px 5px;
-	line-height: 80px;
+	padding: 0px 20px;
+	line-height: 40px;
 	background: none;
-	color: rgb(255, 255, 255);
-	font-size: 16px;
+	color: rgb(226, 128, 0);
+	font-size: 15px;
 	display: inline-block;
 	width: 100%;
-	border-bottom: 0px solid rgba(0,0,0,0.05);
+	border-bottom: 1px solid rgba(54, 54, 54, 0.05);
 }
 header .menu ul.dropdown li a:hover {
 	background: #343434;
