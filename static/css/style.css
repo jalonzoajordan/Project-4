@@ -243,6 +243,16 @@ hr {
 	letter-spacing: 1px;
 	color: #ffffff;
 }
+.title h6 {
+	font-weight: normal;
+	margin: 0px;
+	font-size: 26px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+	color: #ffffff;
+}
 .title p {
 	color: #989898;
 	font-size: 15px;
