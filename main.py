@@ -1,6 +1,6 @@
 #import python libraries
 from flask import Flask, render_template, jsonify
-from lib import poker_learning_app
+from lib import poker_learning_app, form_page_library
 
 #set up Flask
 app = Flask(__name__)
@@ -12,6 +12,19 @@ def home(*args):
     print("Page accessed: Home")
     #output to webpage
     return render_template("index.html")
+
+
+#form
+@app.route("/poker_form")
+def home(*args):
+    #log server action
+    print("Page accessed: poker_form")
+    cards = form_page_library.card_list()
+    #output to webpage
+    return render_template("play.html", cards = cards)
+
+
+
 
 #poker results
 @app.route("/results", methods=['POST', 'GET'])
