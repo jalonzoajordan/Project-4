@@ -1,5 +1,5 @@
 #import python libraries
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template
 from lib import poker_learning_app, form_page_library
 
 #set up Flask
@@ -21,7 +21,7 @@ def data():
     return render_template("data.html")
 
 #form
-@app.route("/poker_form")
+@app.route("/poker_form", methods=['POST', 'GET'])
 def poker_form(*args):
     #log server action
     print("Page accessed: poker_form")

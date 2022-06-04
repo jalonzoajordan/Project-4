@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,22 +12,18 @@
 
 <!--MAIN STYLE-->
 <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <!-- <link href="css/main.css" rel="stylesheet" type="text/css"> -->
-<link href="../static/css/style.css" rel="stylesheet" type="text/css">
+<link href="static/css/style.css" rel="stylesheet" type="text/css">
 <!-- <link href="css/responsive.css" rel="stylesheet" type="text/css"> -->
-<link href="../static/css/animate.css" rel="stylesheet" type="text/css">
+<link href="static/css/animate.css" rel="stylesheet" type="text/css">
 
-
-<script src="../static/js/form_fill.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+<script src="{{ url_for('static', filename='js/form_fill.js') }}"></script>
 
 <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-<link rel="stylesheet" type="text/css" href="../static/rs-plugin/css/settings.css" media="screen" />
-
-
-
-
+<link rel="stylesheet" type="text/css" href="static/rs-plugin/css/settings.css" media="screen" />
 
 <style>
 * {
@@ -175,7 +170,7 @@ textarea:focus {
 <!-- <img src="images/slides/poker.jpg" alt="pokerpic"> -->
 
 
-<form action="#">
+<form action={{url_for('results')}} method="POST">
 
   <header>
     <h1>Enter Credentials</h1>
@@ -188,7 +183,7 @@ textarea:focus {
     	Num Players
     </label>
     <div>
-    <select id="numer_of_players" name="num_players" class="field select medium" tabindex="11" onchange="updatePlayers();"> 
+    <select id="number_of_players" name="num_players" class="field select medium" tabindex="11" onchange="updatePlayers();"> 
       
     </select>
     </div>
@@ -197,21 +192,21 @@ textarea:focus {
   <div>
     <label class="desc" id="title1" for="Field1">Chip Count</label>
     <div>
-      <input id="chip_count" name="chip_count" type="text" class="field text fn" value="How Many Chips Did You Start With?" size="8" tabindex="1">
+      <input id="chip_count" name="chip_count" type="number" class="field text fn" value=0 placeholder=0 size="8" tabindex="1">
     </div>
   </div>
 
   <div>
     <label class="desc" id="title1" for="Field1">Flop Pot</label>
     <div>
-      <input id="flop_pot" name="flop_pot" type="text" class="field text fn" value="" size="8" tabindex="1">
+      <input id="flop_pot" name="flop_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
     </div>
   </div>
 
   <div>
     <label class="desc" id="title1" for="Field1">Turn Pot</label>
     <div>
-      <input id="turn_pot" name="turn_pot" type="text" class="field text fn" value="" size="8" tabindex="1">
+      <input id="turn_pot" name="turn_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
     </div>
   </div>
   
@@ -219,7 +214,7 @@ textarea:focus {
   <div>
     <label class="desc" id="title1" for="Field1">River Pot</label>
     <div>
-      <input id="river_pot" name="river_pot" type="text" class="field text fn" value="" size="8" tabindex="1">
+      <input id="river_pot" name="river_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
     </div>
   </div>
 
@@ -228,7 +223,7 @@ textarea:focus {
     	Chair Number
     </label>
     <div>
-    <select id="chair_number" name="chair_num" class="field select medium" tabindex="11"> 
+    <select id="chair_number" name="chair_num" value=1 class="field select medium" tabindex="11"> 
       
     </select>
     </div>
@@ -240,7 +235,7 @@ textarea:focus {
     	Bet Amount
     </label>
     <div>
-      <input id="bet_amount" name="bet_amt" type="text" class="field text fn" value="How Much Have You Bet  This Pot So Far?" size="8" tabindex="1">
+      <input id="bet_amount" name="bet_amt" type="number" class="field text fn" value=0 placeholder="0" size="8" tabindex="1">
       
     </select>
     </div>
@@ -289,7 +284,7 @@ textarea:focus {
     	Card 1
     </label>
     <div>
-    <select id="available_cards" name="card_1" class="field select medium" tabindex="11"> 
+    <select id="available_cards_1" name="card_1" class="field select medium" tabindex="11"> 
       
     </select>
     </div>
@@ -301,7 +296,7 @@ textarea:focus {
     	Card 2
     </label>
     <div>
-    <select id="available_cards" name="card_2" class="field select medium" tabindex="11"> 
+    <select id="available_cards_2" name="card_2" class="field select medium" tabindex="11"> 
       
     </select>
     </div>
@@ -313,7 +308,7 @@ textarea:focus {
     	Card 3
     </label>
     <div>
-    <select id="available_cards" name="card_3" class="field select medium" tabindex="11"> 
+    <select id="available_cards_3" name="card_3" class="field select medium" tabindex="11"> 
       
     </select>
     </div>
@@ -325,7 +320,7 @@ textarea:focus {
     	Card 4
     </label>
     <div>
-    <select id="available_cards" name="card_4" class="field select medium" tabindex="11"> 
+    <select id="available_cards_4" name="card_4" class="field select medium" tabindex="11"> 
       
     </select>
     </div>
@@ -337,7 +332,7 @@ textarea:focus {
     	Card 5
     </label>
     <div>
-    <select id="available_cards" name="card_5" class="field select medium" tabindex="11"> 
+    <select id="available_cards_5" name="card_5" class="field select medium" tabindex="11"> 
       
     </select>
     </div>
@@ -347,7 +342,7 @@ textarea:focus {
 
   <div>
 		<div>
-  		<input id="saveForm" name="saveForm" type="submit" value="Submit" href="/results">
+  		<button type="submit" href="/results">Submit Query</button>
     </div>
 	</div>
   
@@ -355,17 +350,17 @@ textarea:focus {
 
 <div><p>Result: {{reccomendation}}, Confidence: {{confidence}}</p></div>
 
-<script src="../static/js/jquery-1.11.3.min.js"></script> 
-<script src="../static/js/bootstrap.min.js"></script> 
-<script src="../static/js/own-menu.js"></script> 
-<script src="../static/js/owl.carousel.min.js"></script> 
-<script src="../static/js/jquery.isotope.min.js"></script> 
-<script src="../static/js/counter.js"></script> 
+<script src="static/js/jquery-1.11.3.min.js"></script> 
+<script src="static/js/bootstrap.min.js"></script> 
+<script src="static/js/own-menu.js"></script> 
+<script src="static/js/owl.carousel.min.js"></script> 
+<script src="static/js/jquery.isotope.min.js"></script> 
+<script src="static/js/counter.js"></script> 
 
 <!-- SLIDER REVOLUTION 4.x SCRIPTS  --> 
-<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
-<script type="text/javascript" src="../static/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
-<script src="../static/js/main.js"></script>
+<script type="text/javascript" src="static/rs-plugin/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="/static/rs-plugin/js/jquery.themepunch.revolution.min.js"></script> 
+<script src="static/js/main.js"></script>
 </body>
 
 </html>
