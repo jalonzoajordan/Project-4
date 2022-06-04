@@ -7,6 +7,8 @@
       THEME STYLING START
 ========================================================*/
 
+
+
 navlist-right li {
     display: inline-block;
 }
@@ -272,7 +274,7 @@ hr {
 	font-size: 26px;
 	font-weight: normal;
 	text-transform: uppercase;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 	letter-spacing: 1px;
 	color: #ffffff;
 }
@@ -326,6 +328,21 @@ header {
 /*=======================================================
      Navigation Text 
 ========================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 header nav {
 	display: inline-block;
 	position: relative;
