@@ -74,7 +74,7 @@ return false;
 jQuery('.tp-banner').show().revolution({
   dottedOverlay:"none",
   delay:10000,
-  startwidth:1170,
+  startwidth:100,
   startheight:825,
   navigationType:"bullet",
   navigationArrows:"solo",
@@ -84,59 +84,11 @@ jQuery('.tp-banner').show().revolution({
   parallaxLevels:[7,4,3,2,5,4,3,2,1,0],                       
   keyboardNavigation:"on",            
   shadow:0,
-  fullWidth:"on",
+  fullWidth:"off",
   fullScreen:"off",
   shuffle:"off",            
   autoHeight:"off",           
   forceFullWidth:"off", 
-  fullScreenOffsetContainer:""  
+  fullScreenOffsetContainer:"off"  
 });
 });
-/*-----------------------------------------------------------------------------------*/
-/*    CONTACT FORM
-/*-----------------------------------------------------------------------------------*/
-function checkmail(input){
-  var pattern1=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  	if(pattern1.test(input)){ return true; }else{ return false; }}     
-    function proceed(){
-    	var name = document.getElementById("name");
-		var email = document.getElementById("email");
-		var company = document.getElementById("company");
-		var web = document.getElementById("website");
-		var msg = document.getElementById("message");
-		var errors = "";
-		if(name.value == ""){ 
-		name.className = 'error';
-	  	  return false;}    
-		  else if(email.value == ""){
-		  email.className = 'error';
-		  return false;}
-		    else if(checkmail(email.value)==false){
-		        alert('Please provide a valid email address.');
-		        return false;}
-		    else if(company.value == ""){
-		        company.className = 'error';
-		        return false;}
-		   else if(web.value == ""){
-		        web.className = 'error';
-		        return false;}
-		   else if(msg.value == ""){
-		        msg.className = 'error';
-		        return false;}
-		   else 
-		  {
-	$.ajax({
-		type: "POST",
-		url: "php/submit.php",
-		data: $("#contact_form").serialize(),
-		success: function(msg){
-		//alert(msg);
-		if(msg){
-			$('#contact_form').fadeOut(1000);
-			$('#contact_message').fadeIn(1000);
-				document.getElementById("contact_message");
-			 return true;
-		}}
-	});
-}};
-
