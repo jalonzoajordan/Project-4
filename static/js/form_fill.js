@@ -24,9 +24,6 @@ function updatePlayers(){
 
 }
 
-
-
-
 function updateTurn(){
     change = d3.select("players_flop").attr('value');
 

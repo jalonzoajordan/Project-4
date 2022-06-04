@@ -4,13 +4,14 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import ast
 from flask import request
+import os
 
 #import trained machine learning model
-path = "../data/poker_model.hdf5"
+path = f"{os.getcwd()}/data/poker_model.hdf5"
 nn_model = load_model(path)
 
 #get the model headers from the output text file
-headers_path = "../data/dummies_columns.txt"
+headers_path = f"{os.getcwd()}/data/dummies_columns.txt"
 header = open(headers_path, "r")
 header = header.readlines()
 header = ast.literal_eval(header[0])

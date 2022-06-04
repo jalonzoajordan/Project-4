@@ -13,17 +13,21 @@ def home(*args):
     #output to webpage
     return render_template("index.html")
 
+@app.route("/data")
+def data():
+    #log server action
+    print("Page accessed: data visualizations")
+    #output to webpage
+    return render_template("data.html")
 
 #form
 @app.route("/poker_form")
-def home(*args):
+def poker_form(*args):
     #log server action
     print("Page accessed: poker_form")
     cards = form_page_library.card_list()
     #output to webpage
     return render_template("play.html", cards = cards)
-
-
 
 
 #poker results
@@ -39,8 +43,8 @@ def results():
         reccomendation = "DO NOT BET!"
     else:
         recommendation = "BET!"
-    return render_template("result.html", confidence = confidence, reccomendation = reccomendation)
-    
+    return render_template("play.html", confidence = confidence, reccomendation = reccomendation)
+
 
 #run the app
 if __name__ == "__main__":
