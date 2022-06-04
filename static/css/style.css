@@ -366,6 +366,14 @@ header .menu ul.dropdown {
 /*=======================================================
      Menu Text 
 ========================================================*/
+.menu{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	float: right;
+	list-style-type: none;
+}
 header .menu ul.dropdown li a {
 	text-transform: uppercase;
 	font-size: 20px;
@@ -373,11 +381,11 @@ header .menu ul.dropdown li a {
 	padding: 0px 20px;
 	line-height: 40px;
 	background: none;
-	color: rgb(226, 128, 0);
-	font-size: 15px;
-	display: inline-block;
+	color: rgb(255, 255, 255);
+	font-size: 12px;
+	
 	width: 100%;
-	border-bottom: 1px solid rgba(54, 54, 54, 0.05);
+
 }
 header .menu ul.dropdown li a:hover {
 	background: #343434;
