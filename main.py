@@ -36,14 +36,16 @@ def results():
     #log server action
     print("Page accessed: results")
     #run the machine learning model
+    cards = form_page_library.card_list()
     result = poker_learning_app.get_pokerResults()
     #extract into outputs
     confidence = result[1]
-    if result[0] == 0:
-        reccomendation = "DO NOT BET!"
+    reccomendation = "FAILED TO LOAD"
+    if result[0] > 0.5:
+        reccomendation = "BET!"
     else:
-        recommendation = "BET!"
-    return render_template("play.html", confidence = confidence, reccomendation = reccomendation)
+        reccomendation = "DO NOT BET!"
+    return render_template("play.html", cards=cards, confidence = confidence, reccomendation = reccomendation)
 
 
 #run the app

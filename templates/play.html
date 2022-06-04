@@ -137,7 +137,7 @@ textarea:focus {
 </style>
 
 </head>
-<body onload="loadPage({{cards}});">
+<body onload="loadPage({{cards}}); updatePlayers();">
 
 <!-- Page Wrap -->
 <div id="wrap">
@@ -247,7 +247,7 @@ textarea:focus {
     	Players Flop
     </label>
     <div>
-    <select id="players_flop" name="players_flop" class="field select medium" tabindex="11" onchange="updateTurn();"> 
+    <select id="players_flop" name="players_flop" class="field select medium" tabindex="11" placeholder=0 onchange="updateTurn();"> 
       
     </select>
     </div>
@@ -259,7 +259,7 @@ textarea:focus {
     	Players Turn
     </label>
     <div>
-    <select id="players_turn" name="players_turn" class="field select medium" tabindex="11" onchange="updateRiver();"> 
+    <select id="players_turn" name="players_turn" class="field select medium" tabindex="11" placeholder=0 onchange="updateRiver();"> 
       
     </select>
     </div>

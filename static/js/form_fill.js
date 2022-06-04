@@ -13,28 +13,35 @@ function loadPage(cards){
         d3.select("#available_cards_5").append('option').attr('value', card).text(card);
     }
 
+    d3.select("#chair_number").append('option').attr('value', 1).text(1);
+    d3.select("#players_flop").append('option').attr('value', 0).text(0)
+    d3.select("#players_turn").append('option').attr('value', 0).text(0)
+    d3.select("#players_river").append('option').attr('value', 0).text(0)
 }
 
 
 function updatePlayers(){
-    change = d3.select("#number_of_players").node().value;
+    selection = d3.select("#number_of_players").node().value;
+    change = parseInt(selection)
 
     d3.select("#chair_number").html("");
     d3.select("#players_flop").html("");
 
+    d3.select("#players_flop").append('option').attr('value', 0).text(0)
     for (i=0; i<change; i++){
         d3.select("#chair_number").append('option').attr('value', i+1).text(i+1);
         d3.select("#players_flop").append('option').attr('value', i+1).text(i+1);
-
     }
 
 }
 
 function updateTurn(){
-    change = d3.select("#players_flop").node().value;
+    selection = d3.select("#players_flop").node().value;
+    change = parseInt(selection)
 
     d3.select("#players_turn").html("");
 
+    d3.select("#players_turn").append('option').attr('value', 0).text(0)
     for (i=0; i<change; i++){
         d3.select("#players_turn").append('option').attr('value', i+1).text(i+1);
 
@@ -43,9 +50,12 @@ function updateTurn(){
 
 
 function updateRiver(){
-    change = d3.select("#players_turn").node().value;
+    selection = d3.select("#players_turn").node().value;
+    change = parseInt(selection)
 
     d3.select("#players_river").html("");
+
+    d3.select("#players_river").append('option').attr('value', 0).text(0)
     for (i=0; i<change; i++){
         d3.select("#players_river").append('option').attr('value', i+1).text(i+1);
 

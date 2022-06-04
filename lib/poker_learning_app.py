@@ -18,16 +18,16 @@ header = ast.literal_eval(header[0])
 
 def get_pokerResults():
     #get the input from the form
-    num_players = request.form['num_players']
-    flop_pot = request.form['flop_pot']
-    turn_pot = request.form['turn_pot']
-    river_pot = request.form['river_pot']
-    chip_count = request.form['chip_count']
-    chair_num = request.form['chair_num']
-    bet_amt = request.form['bet_amt']
-    players_flop = request.form['players_flop']
-    players_turn = request.form['players_turn']
-    players_river = request.form['players_river']
+    num_players = int(request.form['num_players'])
+    flop_pot = int(request.form['flop_pot'])
+    turn_pot = int(request.form['turn_pot'])
+    river_pot = int(request.form['river_pot'])
+    chip_count = int(request.form['chip_count'])
+    chair_num = int(request.form['chair_num'])
+    bet_amt = int(request.form['bet_amt'])
+    players_flop = int(request.form['players_flop'])
+    players_turn = int(request.form['players_turn'])
+    players_river = int(request.form['players_river'])
     card_1 = request.form['card_1']
     card_2 = request.form['card_2']
     card_3 = request.form['card_3']
