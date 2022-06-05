@@ -46,7 +46,7 @@
                                 <ul class="dropdown">
                                     <li><a href="/">HOME</a></li>
                                     <li><a href="/poker_form">Play</a></li>
-                                    <li><a href="/data">Data</a></li>
+                                    <li><a href="/data.html">Data</a></li>
 
                                 </ul>
                             </li>
@@ -63,8 +63,9 @@
 
     <h1 style="color:whitesmoke;">Our Findings</h1>
     <br>
-    <h6 style="color: white;">Over the course of the project, we made a lot of interesting findings. When analyzing the number of wins by chair number, the position relative to the dealer, 
-    we can see that the closer to the dealer a player sits, the more likely they are to win that round. </h6>
+    <h6 style="color: white;">Over the course of the project, we made a lot of interesting findings. When analyzing the
+        number of wins by chair number, the position relative to the dealer,
+        we can see that the closer to the dealer a player sits, the more likely they are to win that round. </h6>
 
 
     <div class='tableauPlaceholder' id='viz1654357376135' style='position: relative'><noscript><a href='#'><img
@@ -89,7 +90,9 @@
         </object></div>
     <script
         type='text/javascript'>                    var divElement = document.getElementById('viz1654357376135'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    <h6 style="color: white;">Another interesting find was a correlation between the number of players and the average winnings. When there are few players, you are going to average around 25 chips but interestingly enough, when there are the max amount of players, you can actually win more chips. This could
+    <h6 style="color: white;">Another interesting find was a correlation between the number of players and the average
+        winnings. When there are few players, you are going to average around 25 chips but interestingly enough, when
+        there are the max amount of players, you can actually win more chips. This could
         be due to the fact that if there are more players, there are more chips on the table and more to win.
     </h6>
     <div class='tableauPlaceholder' id='viz1654357693484' style='position: relative'><noscript><a href='#'><img
@@ -116,7 +119,15 @@
         type='text/javascript'>                    var divElement = document.getElementById('viz1654357693484'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.height = '487px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%'; vizElement.style.height = '487px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
 
-        <h6 style="color: white;">Lastly, </h6>
+    <h6 style="color: white;">Lastly, it was very interesting to see that the average play bet and average winnings
+        remained the same when compared to the number of players. For example, when
+        there are two players, the average bet and average winning was 27.09 chips. This could be explained because you
+        can only win what chips are on the table but it also confirms our first visualization in that the closer you are
+        to the dealer, the
+        higher your chances of winning are and the amount you may win. It must also be mentioned that although the
+        average bet/winnings went down the more players there were, the average winnings by chair position actually go
+        up as seen in the second visualization.</h6>
+
     <div class='tableauPlaceholder' id='viz1654357122258' style='position: relative'><noscript><a href='#'><img
                     alt='avgwinningsbynumofplayers '
                     src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project-4_16543570155830&#47;avgwinningsbynumofplayers&#47;1_rss.png'
@@ -142,40 +153,7 @@
     </div>
 
 
-    <h1 style="color:white;">Our Data Journey</h1>
-    <h3 style="color:whitesmoke;">Data Cleanup</h3>
-    <h6 style="color: white;">We started with data from the University of Alberta Computer Poker Research group that
-        included three raw CSV files that included information on player's poker hands, winnings, actions during the
-        various rounds of Texas Hold 'Em, chair position, table information as well as betting information. The tables
-        were stored in a sqlite database and imported using SQLalchemy. After reviewing the data, we used Pandas and
-        Python to reduce the number of attributes to 12
-        (num_players, flop_pot, turn_pot, river_pot, chip_count, chair_num, player_bet, table_1, table_2, table_3,
-        table_4, table_5, flop_players, turn_players, river_players) and used the "player_winnings"
-        column as our target value. Columns containing numerical values were converted to numberical types. For the
-        non-numerical values, the "get_dummies" feature was used to allow for the selection of cards on the table. Those
-        columns were table1 - table5
-        and represented the 5 cards that could be played throughout the round. This increased the number of columns from
-        12 to 270. The "y"/"player_winnings" column was formatted to 0's for rows with no winning values and 1's for
-        rows with winnings in order to create our targets.
-        From there, we were able to move on creating the machine learning model.
-    </h6>
-    <br>
-    <img src="../static/images/visualizations/rawdata.png" class="img-fluid" alt="rawdata">
-    <br>
-    <br>
-    <h6 style="color:white;">Once the data had been cleaned, we moved on to the machine learning portion of the project
-        which consisted of our instructor Nathan's three favorite steps: model, fit, predict. We used the Sci-Kit
-        learning library to train/test/split the X dataframe, scale and fit
-        the data using StandardScaler and scaler.transform, and finally define the deep learning model. ****insert
-        information about the model here ****. Once the model ran through, we were able to determine it had 88%
-        accuracy.
-    </h6>
-    <br>
-    <img src="../static/images/visualizations/model.png" class="img-fluid" alt="model">
-    <br><br>
-    <img src="../static/images/visualizations/deeplearning.png" class="img-fluid" alt="deeplearning">
 
-    <br><br>
 
     </div>
     </section>
