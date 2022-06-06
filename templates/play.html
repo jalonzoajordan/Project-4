@@ -169,186 +169,208 @@ textarea:focus {
 
 <!-- <img src="images/slides/poker.jpg" alt="pokerpic"> -->
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<form action={{url_for('results')}} method="POST">
-
-  <header>
-    <h1>Enter Credentials</h1>
-    <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div>
-  </header>
-
-
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Num Players
-    </label>
-    <div>
-    <select id="number_of_players" name="num_players" class="field select medium" tabindex="11" onchange="updatePlayers();"> 
-      
-    </select>
-    </div>
-  </div>
+<style>
+  .content {
+    max-width: 500px;
+    margin: auto;
+    background: rgb(111, 108, 108);
+  }
+  </style>
+  <body>
   
-  <div>
-    <label class="desc" id="title1" for="Field1">Chip Count</label>
-    <div>
-      <input id="chip_count" name="chip_count" type="number" class="field text fn" value=0 placeholder=0 size="8" tabindex="1">
-    </div>
-  </div>
+  <div class="content">
+    <form action={{url_for('results')}} method="POST">
 
-  <div>
-    <label class="desc" id="title1" for="Field1">Flop Pot</label>
-    <div>
-      <input id="flop_pot" name="flop_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
-    </div>
-  </div>
-
-  <div>
-    <label class="desc" id="title1" for="Field1">Turn Pot</label>
-    <div>
-      <input id="turn_pot" name="turn_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
-    </div>
-  </div>
-  
-  
-  <div>
-    <label class="desc" id="title1" for="Field1">River Pot</label>
-    <div>
-      <input id="river_pot" name="river_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
-    </div>
-  </div>
-
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Chair Number
-    </label>
-    <div>
-    <select id="chair_number" name="chair_num" value=1 class="field select medium" tabindex="11"> 
-      
-    </select>
-    </div>
-  </div>
+      <header>
+        <h1>Enter Credentials</h1>
+        <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div>
+      </header>
     
-  
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Bet Amount
-    </label>
-    <div>
-      <input id="bet_amount" name="bet_amt" type="number" class="field text fn" value=0 placeholder="0" size="8" tabindex="1">
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Num Players
+        </label>
+        <div>
+        <select id="number_of_players" name="num_players" class="field select medium" tabindex="11" onchange="updatePlayers();"> 
+          
+        </select>
+        </div>
+      </div>
       
-    </select>
-    </div>
+      <div>
+        <label class="desc" id="title1" for="Field1">Chip Count</label>
+        <div>
+          <input id="chip_count" name="chip_count" type="number" class="field text fn" value=0 placeholder=0 size="8" tabindex="1">
+        </div>
+      </div>
+    
+      <div>
+        <label class="desc" id="title1" for="Field1">Flop Pot</label>
+        <div>
+          <input id="flop_pot" name="flop_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
+        </div>
+      </div>
+    
+      <div>
+        <label class="desc" id="title1" for="Field1">Turn Pot</label>
+        <div>
+          <input id="turn_pot" name="turn_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
+        </div>
+      </div>
+      
+      
+      <div>
+        <label class="desc" id="title1" for="Field1">River Pot</label>
+        <div>
+          <input id="river_pot" name="river_pot" type="number" class="field text fn" value=0 size="8" tabindex="1" placeholder=0>
+        </div>
+      </div>
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Chair Number
+        </label>
+        <div>
+        <select id="chair_number" name="chair_num" value=1 class="field select medium" tabindex="11"> 
+          
+        </select>
+        </div>
+      </div>
+        
+      
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Bet Amount
+        </label>
+        <div>
+          <input id="bet_amount" name="bet_amt" type="number" class="field text fn" value=0 placeholder="0" size="8" tabindex="1">
+          
+        </select>
+        </div>
+      </div>
+    
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Players Flop
+        </label>
+        <div>
+        <select id="players_flop" name="players_flop" class="field select medium" tabindex="11" placeholder=0 onchange="updateTurn();"> 
+          
+        </select>
+        </div>
+      </div>
+    
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Players Turn
+        </label>
+        <div>
+        <select id="players_turn" name="players_turn" class="field select medium" tabindex="11" placeholder=0 onchange="updateRiver();"> 
+          
+        </select>
+        </div>
+      </div>
+    
+    
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Players River
+        </label>
+        <div>
+        <select id="players_river" name="players_river" class="field select medium" tabindex="11"> 
+          
+        </select>
+        </div>
+      </div>
+    
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Card 1
+        </label>
+        <div>
+        <select id="available_cards_1" name="card_1" class="field select medium" tabindex="11"> 
+          
+        </select>
+        </div>
+      </div>
+    
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Card 2
+        </label>
+        <div>
+        <select id="available_cards_2" name="card_2" class="field select medium" tabindex="11"> 
+          
+        </select>
+        </div>
+      </div>
+    
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Card 3
+        </label>
+        <div>
+        <select id="available_cards_3" name="card_3" class="field select medium" tabindex="11"> 
+          
+        </select>
+        </div>
+      </div>
+    
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Card 4
+        </label>
+        <div>
+        <select id="available_cards_4" name="card_4" class="field select medium" tabindex="11"> 
+          
+        </select>
+        </div>
+      </div>
+    
+    
+      <div>
+        <label class="desc" id="title106" for="Field106">
+          Card 5
+        </label>
+        <div>
+        <select id="available_cards_5" name="card_5" class="field select medium" tabindex="11"> 
+          
+        </select>
+        </div>
+      </div>
+    
+    
+    
+      <div>
+        <div>
+          <button type="submit" href="/results">Submit Query</button>
+        </div>
+      </div>
+      
+    </form>
+    
+    <div><p>Result: {{reccomendation}}, Confidence: {{confidence}}</p></div>
   </div>
 
 
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Players Flop
-    </label>
-    <div>
-    <select id="players_flop" name="players_flop" class="field select medium" tabindex="11" placeholder=0 onchange="updateTurn();"> 
-      
-    </select>
-    </div>
-  </div>
 
 
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Players Turn
-    </label>
-    <div>
-    <select id="players_turn" name="players_turn" class="field select medium" tabindex="11" placeholder=0 onchange="updateRiver();"> 
-      
-    </select>
-    </div>
-  </div>
-
-
-
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Players River
-    </label>
-    <div>
-    <select id="players_river" name="players_river" class="field select medium" tabindex="11"> 
-      
-    </select>
-    </div>
-  </div>
-
-
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Card 1
-    </label>
-    <div>
-    <select id="available_cards_1" name="card_1" class="field select medium" tabindex="11"> 
-      
-    </select>
-    </div>
-  </div>
-
-
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Card 2
-    </label>
-    <div>
-    <select id="available_cards_2" name="card_2" class="field select medium" tabindex="11"> 
-      
-    </select>
-    </div>
-  </div>
-
-
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Card 3
-    </label>
-    <div>
-    <select id="available_cards_3" name="card_3" class="field select medium" tabindex="11"> 
-      
-    </select>
-    </div>
-  </div>
-
-
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Card 4
-    </label>
-    <div>
-    <select id="available_cards_4" name="card_4" class="field select medium" tabindex="11"> 
-      
-    </select>
-    </div>
-  </div>
-
-
-  <div>
-    <label class="desc" id="title106" for="Field106">
-    	Card 5
-    </label>
-    <div>
-    <select id="available_cards_5" name="card_5" class="field select medium" tabindex="11"> 
-      
-    </select>
-    </div>
-  </div>
-
-
-
-  <div>
-		<div>
-  		<button type="submit" href="/results">Submit Query</button>
-    </div>
-	</div>
-  
-</form>
-
-<div><p>Result: {{reccomendation}}, Confidence: {{confidence}}</p></div>
 
 <script src="static/js/jquery-1.11.3.min.js"></script> 
 <script src="static/js/bootstrap.min.js"></script> 
