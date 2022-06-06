@@ -72,6 +72,9 @@ fieldset {
 	border: 0;
   padding: 0;
 }
+label {
+  color: white;
+}
 
 input[type=text],
 input[type=email],
@@ -173,23 +176,23 @@ textarea:focus {
 <form action={{url_for('results')}} method="POST">
 
   <header>
-    <h1>Enter Credentials</h1>
-    <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div>
+    <h1 style="color: white;">Enter Credentials</h1>
+    <!-- <div>This form breaks at 600px and goes from a left-label form to a top-label form. At above 1200px, the labels align right.</div> -->
   </header>
 
 
   <div>
     <label class="desc" id="title106" for="Field106">
-    	Num Players
+    Number of Players
     </label>
-    <div>
+    <div data-bs-toggle="tooltip" data-bs-placement="top" title="TEST">
     <select id="number_of_players" name="num_players" class="field select medium" tabindex="11" onchange="updatePlayers();"> 
-      
+
     </select>
     </div>
   </div>
   
-  <div>
+  <div data-bs-toggle="tooltip" data-bs-placement="top" title="The number of chips on the table.">
     <label class="desc" id="title1" for="Field1">Chip Count</label>
     <div>
       <input id="chip_count" name="chip_count" type="number" class="field text fn" value=0 placeholder=0 size="8" tabindex="1">
