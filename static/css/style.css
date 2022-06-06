@@ -121,7 +121,7 @@ h6 {
 	font-size: 16px;
 }
 p {
-	color: #989898;
+	color: rgb(190, 177, 177);
 	font-size: 13px;
 	line-height: 28px;
 	font-family: 'montserratlight';
@@ -290,7 +290,7 @@ hr {
 	text-transform: uppercase;
 	margin-bottom: 50px;
 	letter-spacing: 1px;
-	color: #ffffff;
+	color: rgb(190, 177, 177);
 }
 .title h6 {
 	font-weight: normal;
@@ -300,10 +300,10 @@ hr {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	letter-spacing: 1px;
-	color: #ffffff;
+	color: rgb(190, 177, 177);
 }
 .title p {
-	color: #989898;
+	color: rgb(190, 177, 177);
 	font-size: 15px;
 	font-family: 'Droid Serif', serif;
 	line-height: 28px;
