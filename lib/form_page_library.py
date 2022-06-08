@@ -1,11 +1,10 @@
 import sqlalchemy
 from sqlalchemy import create_engine, inspect
-import os
 
 def card_list():
     #set up engine
-    engine = create_engine(f"sqlite:///{os.getcwd()}/Data/Poker_data.db")
-    
+    engine = create_engine(f"postgresql://yiluefypceulzp:be583ca4c86a6b2bba9122550256efd0570894caed40063dd83216bfa884ee42@ec2-3-234-131-8.compute-1.amazonaws.com:5432/d5534vfkpk3oln")
+
     #run queries for data
     cards_query = engine.execute('SELECT DISTINCT table_1 from dbo_hands ORDER BY table_1').fetchall()
     cards_list = []
