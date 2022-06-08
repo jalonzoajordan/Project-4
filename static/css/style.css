@@ -121,7 +121,7 @@ h6 {
 	font-size: 16px;
 }
 p {
-	color: rgb(190, 177, 177);
+	color: rgb(233, 231, 231);
 	font-size: 13px;
 	line-height: 28px;
 	font-family: 'montserratlight';
@@ -290,7 +290,7 @@ hr {
 	text-transform: uppercase;
 	margin-bottom: 50px;
 	letter-spacing: 1px;
-	color: rgb(190, 177, 177);
+	color: rgb(235, 232, 232);
 }
 .title h6 {
 	font-weight: normal;
@@ -300,10 +300,10 @@ hr {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	letter-spacing: 1px;
-	color: rgb(190, 177, 177);
+	color: rgb(235, 232, 232);
 }
 .title p {
-	color: rgb(190, 177, 177);
+	color: rgb(235, 232, 232);
 	font-size: 15px;
 	font-family: 'Droid Serif', serif;
 	line-height: 28px;
@@ -373,7 +373,7 @@ header nav li a {
 	text-decoration: none;
 	line-height: 20px;
 	text-transform: uppercase;
-	color: rgb(190, 177, 177);
+	color: rgb(235, 232, 232);
 	float: left;
 	font-size: 12px;
 	margin:  0 15px;
