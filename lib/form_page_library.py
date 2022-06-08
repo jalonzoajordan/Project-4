@@ -1,6 +1,5 @@
 import sqlalchemy
 from sqlalchemy import create_engine, inspect
-import pandas as pd
 import os
 
 #set up engine
